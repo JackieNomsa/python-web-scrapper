@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+{% block title %}- movie choice{% endblock %}
+
+{% block body %}
+<div class="my-links">
+    <a href="/">back</a>
+    <a href="/all_movies">View all movies</a>
+</div>
+    <div class="one-movie">
+        <h2>I think today you should try:</h2>
+        
+        <h4 class="title">Movie Title: {{context.Name}}</h4>
+        <p>Actors: {{context.Actors}}</p>
+        <p>Year: {{context.Year}}</p>
+        <p>Ratings: {{context.Ratings}}<i class="stars material-icons">star</i></p>
+
+        <h3><i class="smile large material-icons">mood</i></h3>
+    </div>
+{% endblock %}

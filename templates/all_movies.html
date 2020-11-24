@@ -1,0 +1,20 @@
+{% extends 'home.html' %}
+{% block title %}- movies{% endblock %}
+
+{% block body %}
+
+<div class="all_movies">
+    <h2 class="my-mov">Movies with an IMDb Rating of 8.0 and above</h2>
+    <div class="my-links">
+        <a href="/">back</a>
+        <a href="/movie">see chosen movie</a>
+    </div>
+    {% for i in context %}
+    <h4 class="title">Movie Title: {{i.Name}}</h4>
+    <p>Actors: {{i.Actors}}</p>
+    <p>Year: {{i.Year}}</p>
+    <p>Ratings: {{i.Ratings}}<i class="stars material-icons">star</i></p>
+    {% endfor %} 
+</div>
+<small>https://www.imdb.com/</small>
+{% endblock %}

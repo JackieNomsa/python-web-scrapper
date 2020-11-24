@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+a.btn{
+    text-decoration: none;
+    margin: .5rem;
+    border: 1px solid #2bae66ff;
+    padding: .5rem;
+    text-transform: uppercase;
+    position: relative;
+   
+}
+
+.movie-head{
+    color: #2bae66ff;
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+div{
+    margin-bottom: 2em;
+}
+
+.first-page{
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 5px rgba(145, 180, 150, 0.4);
+    padding: 3rem;
+     background-color: rgba(255, 255, 255, .5);
+ 
+}
+
+/* first button */
+a.one{
+    color: #2bae66ff;
+}
+
+a.one::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: rgba(77, 175, 124, 0.9);
+    transition: transform 400ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+a.one:hover::before,
+a.one:focus::before{
+    transform: scaleX(1);
+}
+
+
+a.one{
+    transition: color 400ms ease-in-out;
+    z-index: 1;
+}
+
+a.one:hover,
+a.two:focus{
+    color:#fff;
+}
+
+
+/* second button */
+a.two{
+    color: #2bae66ff;
+}
+
+a.two::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color:rgba(77, 175, 124, 0.9);
+    transition: transform 400ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+a.two:hover::before,
+a.two:focus::before{
+    transform: scaleX(1);
+}
+
+
+a.two{
+    transition: color 400ms ease-in-out;
+    z-index: 1;
+}
+
+a.two:hover,
+a.two:focus{
+    color:#fff;
+}
+
+/* all_movies.html */
+.my-mov{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    color:#53A567FF;
+   
+}
+
+.all_movies{
+    background-color: #fcf6f5ff;
+    width: 100vw;
+    padding: 2rem;
+    
+}
+
+.stars{
+    color:	#FFD700;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: auto;
+}
+
+.title{
+    border-bottom: 4px solid #2bae66ff;
+    display: inline;
+}
+
+/* movie.html */
+
+.one-movie{
+    background-color: #fcf6f5ff;
+    padding: 2rem;
+}
+
+.smile{
+    color: red;
+}
+
+ .my-links a{
+    text-decoration: none;
+    color: #2bae66ff;
+    margin: 2rem;
+}
+
+.my-links a:hover{
+    color: rgb(233, 134, 134);
+    padding-bottom: 6px;
+    border-bottom: 4px solid #2bae66ff;
+    transition: color 400ms ease-in-out;
+    transition: border 400ms ease-in-out;
+}
+
+@media(max-width: 400px){
+    .one-movie{
+        font-size: 4.1vh !important;
+    }
+}
+
+@media(max-width: 500px){
+    .my-links a{
+        display: block;
+        font-size: 3.9vh;
+        font-weight: 700;
+    }
+
+    a.one,a.two{
+        display: block;
+    }
+
+    .first-page{
+         background-color: rgba(255, 255, 255, .9);
+         font-size: 1.4vh;
+     
+    }
+}
+
+@media(max-width: 798px){
+    a.one,a.two{
+        display: block;
+    }
+}
+
+@media(max-width: 900px){
+    .all_movies{
+        font-size: 2.2vh;
+    }
+}
+
+@media(max-width: 1400px){
+   
+    .first-page,.all_movies,.one-movie{
+        font-size: 2.5vh;
+    }
+
+
+    .stars{
+        font-size:1rem;
+    }
+}

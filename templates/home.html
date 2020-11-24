@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie picker{% block title%}{% endblock%}</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+    {% block body%}
+    
+    <div class='first-page'>
+        <h2 class="movie-head">**Movie Picker**</h2>
+        <a href="/movie" class="btn one">Choose a movie for me</a>
+        <a href="/all_movies" class="btn two">Show me all movies</a>
+    </div>
+    {% endblock %}
+</body>
+</html>
